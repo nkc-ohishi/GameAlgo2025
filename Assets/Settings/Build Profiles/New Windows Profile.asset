@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: WindowMode
+  m_Name: New Windows Profile
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
   m_BuildTarget: 19
   m_Subtarget: 2
   m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 8191437751386112000
+    rid: 8191437910298591294
   m_OverrideGlobalSceneList: 0
   m_Scenes: []
   m_ScriptingDefines: []
@@ -35,7 +35,7 @@ MonoBehaviour:
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
     - line: '|   companyName: DefaultCompany'
-    - line: '|   productName: GameAlgo Lesson02'
+    - line: '|   productName: GameAlgo2025'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -65,8 +65,8 @@ MonoBehaviour:
     - line: '|   m_SplashScreenLogos: []'
     - line: '|   m_VirtualRealitySplashScreen: {instanceID: 0}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
-    - line: '|   defaultScreenWidth: 1280'
-    - line: '|   defaultScreenHeight: 720'
+    - line: '|   defaultScreenWidth: 1024'
+    - line: '|   defaultScreenHeight: 768'
     - line: '|   defaultScreenWidthWeb: 960'
     - line: '|   defaultScreenHeightWeb: 600'
     - line: '|   m_StereoRenderingPath: 0'
@@ -129,7 +129,7 @@ MonoBehaviour:
     - line: '|   xboxEnableFitness: 0'
     - line: '|   visibleInBackground: 1'
     - line: '|   allowFullscreenSwitch: 1'
-    - line: '|   fullscreenMode: 3'
+    - line: '|   fullscreenMode: 1'
     - line: '|   xboxSpeechDB: 0'
     - line: '|   xboxEnableHeadOrientation: 0'
     - line: '|   xboxEnableGuest: 0'
@@ -311,50 +311,7 @@ MonoBehaviour:
     - line: '|   AndroidAppBundleSizeToValidate: 150'
     - line: '|   AndroidReportGooglePlayAppDependencies: 1'
     - line: '|   androidSymbolsSizeThreshold: 800'
-    - line: '|   m_BuildTargetIcons:'
-    - line: '|   - m_BuildTarget: Standalone'
-    - line: '|     m_Icons:'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {fileID: 2800000, guid: 51a0039bd83798142b9a383f493e7bfd,
-        type: 3}'
-    - line: '|       m_Width: 1024'
-    - line: '|       m_Height: 1024'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 512'
-    - line: '|       m_Height: 512'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 256'
-    - line: '|       m_Height: 256'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 128'
-    - line: '|       m_Height: 128'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 64'
-    - line: '|       m_Height: 64'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 48'
-    - line: '|       m_Height: 48'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 32'
-    - line: '|       m_Height: 32'
-    - line: '|       m_Kind: 0'
-    - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {instanceID: 0}'
-    - line: '|       m_Width: 16'
-    - line: '|       m_Height: 16'
-    - line: '|       m_Kind: 0'
+    - line: '|   m_BuildTargetIcons: []'
     - line: '|   m_BuildTargetPlatformIcons:'
     - line: '|   - m_BuildTarget: iPhone'
     - line: '|     m_Icons:'
@@ -1015,7 +972,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8191437751386112000
+    - rid: 8191437910298591294
       type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
         m_Development: 0
