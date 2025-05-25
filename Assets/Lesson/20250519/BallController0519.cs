@@ -7,6 +7,7 @@ public class BallController0519 : MonoBehaviour
 
     void Start()
     {
+    
     }
 
     void Update()

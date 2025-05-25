@@ -6,7 +6,6 @@ public class PlayerController0519 : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     void Update()
@@ -16,6 +15,7 @@ public class PlayerController0519 : MonoBehaviour
         Vector3 dir = Vector3.zero;
         dir.x = Input.GetAxisRaw("Horizontal");
 
+        // 1•bŠÔ‚É–ñyspeedzm/s ‚Ì‘¬“x‚ÅˆÚ“®‚³‚¹‚éŒvZ®
         transform.position += dir * speed * Time.deltaTime;
         Vector3 pos = transform.position;
         

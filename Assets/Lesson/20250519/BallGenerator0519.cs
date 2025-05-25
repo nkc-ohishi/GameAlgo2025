@@ -14,7 +14,7 @@ public class BallGenerator0519 : MonoBehaviour
 
     void Update()
     {
-        if (GameDirector0519.gameFlg == 1) return;
+        if (GameDirector0519.gameFlg != 0) return;
 
         delta += Time.deltaTime;
         if (delta > span)
