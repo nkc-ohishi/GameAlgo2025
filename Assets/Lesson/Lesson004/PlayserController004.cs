@@ -28,7 +28,7 @@ public class PlayerController004 : MonoBehaviour
         // 下にRayを発射（現在位置から下方向に向けて）
         Vector3 rayPos = transform.position;
         Ray ray = new Ray(rayPos, Vector3.down);
-        isGround = Physics.Raycast(ray, 0.5f);                  // Rayが地面に当たったかを判定
+        isGround = Physics.Raycast(ray, 0.6f);                  // Rayが地面に当たったかを判定
         Debug.DrawRay(rayPos, Vector3.down*0.5f, Color.red);    // SceneビューでRayを可視化
 
         // Zキーでジャンプ
