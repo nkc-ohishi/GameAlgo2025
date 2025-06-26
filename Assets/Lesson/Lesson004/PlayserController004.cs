@@ -6,7 +6,7 @@ public class PlayerController004 : MonoBehaviour
 {
     float speed = 5;            // 左右移動スピード
     float deadLine = -5f;       // 失敗ライン
-    float jumpPower = 1000;     // ジャンプ力
+    float jumpPower = 1100;     // ジャンプ力
     Rigidbody rb;               // Rigidbodyコンポーネント保存変数
     Vector3 inputDir = Vector3.zero; // キー入力方向
     private bool isGround = false;
@@ -18,6 +18,11 @@ public class PlayerController004 : MonoBehaviour
 
     void Update()
     {
+        if (GameDirector004.gameFlg != 0)
+        {
+            return;
+        }
+
         inputDir.x = Input.GetAxisRaw("Horizontal");
 
         // 左右移動(ヴェロシティの値を直接変更して左右移動)
@@ -37,15 +42,11 @@ public class PlayerController004 : MonoBehaviour
             rb.AddForce(transform.up * jumpPower);
         }
 
-        // 落ちたらリプレイ
+        // 落ちたらゲームオーバー
         if (transform.position.y <= deadLine)
         {
-            SceneManager.LoadScene(0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit(); //ゲームプレイ終了
+            GameDirector004.gameFlg = 1;
+            //SceneManager.LoadScene(0);
         }
 
     }
