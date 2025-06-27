@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EmissionAnimator : MonoBehaviour
+public class EmissionAnimator004 : MonoBehaviour
 {
     Color baseColor;
     float emissionStrength = 2.0f;
