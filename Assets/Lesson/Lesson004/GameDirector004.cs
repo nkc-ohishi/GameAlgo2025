@@ -4,17 +4,18 @@ using UnityEngine.UI;
 
 public class GameDirector004 : MonoBehaviour
 {
-    public Text durationLabel;
-    public Text titleLabel;
-    public static int gameFlg = 0;
-    float duration;
+    public Text durationLabel;      // 経過時間用UI-TEXT
+    public Text titleLabel;         // タイトル用UI-TEXT
+    public static int gameFlg = 0;  // ゲームの状態フラグ
+    float duration;                 // 経過時間計測用変数
 
     void Start()
     {
         Application.targetFrameRate = 60;
+        gameFlg = 99;               // ゲームの状態　初期値99
+        duration = 0;               // 経過時間計測用変数初期化
 
-        gameFlg = 99;
-        duration = 0;
+        // タイトル文字
         titleLabel.text = "サイドビューゲームシステム\n\nEnterキーでスタート";
     }
 
@@ -25,7 +26,7 @@ public class GameDirector004 : MonoBehaviour
             Application.Quit(); //ゲームプレイ終了
         }
 
-
+        // ゲームシーンが再生された時の状態
         if (gameFlg == 99)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -36,6 +37,7 @@ public class GameDirector004 : MonoBehaviour
             return;
         }
 
+        // ゲームオーバーになった時の状態
         if (gameFlg == 1)
         {
             titleLabel.text = "GAME OVER\nEnterキーでタイトルへ戻る";
@@ -47,6 +49,7 @@ public class GameDirector004 : MonoBehaviour
             return;
         }
 
+        // ゲームクリアーになった時の状態
         if (gameFlg == 2)
         {
             titleLabel.text = "GAME CLEAR\nEnterキーでタイトルへ戻る";
