@@ -6,13 +6,16 @@ public class GameDirector004 : MonoBehaviour
 {
     public Text durationLabel;      // 経過時間用UI-TEXT
     public Text titleLabel;         // タイトル用UI-TEXT
+    public Text scoreLabel;         // スコア用UI-TEXT
     public static int gameFlg = 0;  // ゲームの状態フラグ
+    public static int score   = 0;  // スコア
     float duration;                 // 経過時間計測用変数
 
     void Start()
     {
         Application.targetFrameRate = 60;
         gameFlg = 99;               // ゲームの状態　初期値99
+        score   = 0;                // スコアの初期化
         duration = 0;               // 経過時間計測用変数初期化
 
         // タイトル文字
@@ -64,5 +67,8 @@ public class GameDirector004 : MonoBehaviour
         // 経過時間表示
         duration += Time.deltaTime;
         durationLabel.text = "経過時間：" + duration.ToString("0000.00") + "秒";
+
+        // スコア表示
+        scoreLabel.text = "SCORE " + score.ToString("000000");
     }
 }
