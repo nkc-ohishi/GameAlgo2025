@@ -19,7 +19,7 @@ public class GameDirector004 : MonoBehaviour
         duration = 0;               // 経過時間計測用変数初期化
 
         // タイトル文字
-        titleLabel.text = "サイドビューゲームシステム\n\nEnterキーでスタート";
+        titleLabel.text = "サイドビューゲームシステム\r\n左右移動、Zジャンプ\r\nEnterキーでスタート";
     }
 
     void Update()
