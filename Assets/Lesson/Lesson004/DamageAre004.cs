@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DamageBlockController004 : MonoBehaviour
+public class DamageArea004 : MonoBehaviour
 {
     void Start()
     {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 906781559401020520}
   - component: {fileID: 3245430328234958832}
   m_Layer: 0
-  m_Name: DamageBlock
+  m_Name: DeadArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
