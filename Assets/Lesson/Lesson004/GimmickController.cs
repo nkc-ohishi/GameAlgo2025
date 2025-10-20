@@ -1,13 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class GimmickController : MonoBehaviour
 {
     Rigidbody rb;
     Transform player;
     public float length;
-    bool isfall;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
