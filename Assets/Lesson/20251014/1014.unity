@@ -1157,8 +1157,8 @@ MonoBehaviour:
   moveY: 0
   times: 1
   wait: 0
-  isMoveWhenOn: 1
-  isCanMove: 0
+  isMoveWhenOn: 0
+  isCanMove: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
