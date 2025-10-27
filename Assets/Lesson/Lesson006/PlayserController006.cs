@@ -1,6 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController006 : MonoBehaviour
 {
@@ -11,6 +10,11 @@ public class PlayerController006 : MonoBehaviour
     Vector3 inputDir = Vector3.zero; // キー入力方向
     private bool isGround = false;
 
+    // HPゲージ
+    public Image img;
+    const float MAX_HP = 1000;
+    float now_hp = 1000;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();  // Rigidbodyコンポーネントを保存
@@ -18,10 +22,6 @@ public class PlayerController006 : MonoBehaviour
 
     void Update()
     {
-        if (GameDirector004.gameFlg != 0)
-        {
-            return;
-        }
 
         inputDir.x = Input.GetAxisRaw("Horizontal");
 
@@ -42,6 +42,19 @@ public class PlayerController006 : MonoBehaviour
             rb.AddForce(transform.up * jumpPower);
         }
 
+        // HP自然回復
+        now_hp += 1;
+        now_hp = Mathf.Min(now_hp, MAX_HP);
+        img.fillAmount = now_hp / MAX_HP;
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "DeadObject")
+        {
+            now_hp -= Random.Range(3, 10);
+        }
+    }
+
 
 }
