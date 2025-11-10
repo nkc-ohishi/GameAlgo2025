@@ -43,6 +43,19 @@ public class CannonController007 : MonoBehaviour
                 rb.AddForce(v, ForceMode.Impulse);
             }
         }
+
+        // ñCë‰ÇÃäpìxÇïœçX
+        Vector3 angle = transform.localEulerAngles;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            angle.z += 5;
+            transform.localEulerAngles = angle;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            angle.z -= 5;
+            transform.localEulerAngles = angle;
+        }
     }
 
     private void OnDrawGizmos()

@@ -48,7 +48,7 @@ public class PlayerController007 : MonoBehaviour
         if (!damageflg)
         {
             // HPŽ©‘R‰ñ•œ
-            now_hp += 1;
+            now_hp += 100 * Time.deltaTime;
             now_hp = Mathf.Min(now_hp, MAX_HP);
         }
 
@@ -79,6 +79,12 @@ public class PlayerController007 : MonoBehaviour
         {
             damageflg = false;
         }
+    }
+
+    public void Damage(float d)
+    {
+        now_hp -= d;
+        now_hp = Mathf.Max(now_hp, 0);
     }
 
 }
