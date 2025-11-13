@@ -1,0 +1,91 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerController008 : MonoBehaviour
+{
+    float speed = 5;            // 左右移動スピード
+    float deadLine = -5f;       // 失敗ライン
+    float jumpPower = 1100;     // ジャンプ力
+    Rigidbody rb;               // Rigidbodyコンポーネント保存変数
+    Vector3 inputDir = Vector3.zero; // キー入力方向
+    private bool isGround = false;
+
+    // HPゲージ
+    public Text hpText;
+    public Image hpGage;
+    const float MAX_HP = 1000;
+    float now_hp = 1000;
+    bool damageflg = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();  // Rigidbodyコンポーネントを保存
+        damageflg = false;
+    }
+
+    void Update()
+    {
+
+        inputDir.x = Input.GetAxisRaw("Horizontal");
+
+        // 左右移動(ヴェロシティの値を直接変更して左右移動)
+        Vector3 vel = rb.linearVelocity;
+        vel.x = inputDir.x * speed;
+        rb.linearVelocity = vel;
+
+        // 下にRayを発射（現在位置から下方向に向けて）
+        Vector3 rayPos = transform.position;
+        Ray ray = new Ray(rayPos, Vector3.down);
+        isGround = Physics.Raycast(ray, 0.6f);                  // Rayが地面に当たったかを判定
+        Debug.DrawRay(rayPos, Vector3.down*0.5f, Color.red);    // SceneビューでRayを可視化
+
+        // Zキーでジャンプ
+        if (Input.GetKeyDown(KeyCode.Z) && isGround)
+        {
+            rb.AddForce(transform.up * jumpPower);
+        }
+
+        if (!damageflg)
+        {
+            // HP自然回復
+            now_hp += 100 * Time.deltaTime;
+            now_hp = Mathf.Min(now_hp, MAX_HP);
+        }
+
+
+        hpGage.fillAmount = now_hp / MAX_HP;
+        hpText.text = "HP = " + now_hp.ToString("0000");
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "DeadObject" && damageflg)
+        {
+            now_hp -= Random.Range(10, 20);
+            now_hp = Mathf.Max(now_hp, 0);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {        
+        if (other.tag == "DeadObject")
+        {
+            damageflg = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "DeadObject")
+        {
+            damageflg = false;
+        }
+    }
+
+    public void Damage(float d)
+    {
+        now_hp -= d;
+        now_hp = Mathf.Max(now_hp, 0);
+    }
+
+}
