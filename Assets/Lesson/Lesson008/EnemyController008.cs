@@ -106,7 +106,7 @@ public class EnemyController008 : MonoBehaviour
             Vector3 contactDir = collision.contacts[0].point - transform.position;
             Debug.Log(contactDir);
             // ã‚©‚çÕ“Ë
-            if (contactDir.y > 0.4f)
+            if (contactDir.y < 0.46f)
             {
                 // •à‚« or Šk‚·‚×‚èó‘Ô‚È‚çŠkó‘Ô‚É‚·‚é
                 if (currentState == State.Walking || currentState == State.MovingShell)

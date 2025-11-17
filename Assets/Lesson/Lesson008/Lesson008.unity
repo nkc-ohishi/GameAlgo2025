@@ -511,7 +511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6575\u3092\u4F5C\u308D\u3046"
+  m_Text: "\u6575\u3092\u4F5C\u308D\u3046\n\u7DD1\uFF1A\u6B69\u304D\n\u9752\uFF1A\u6BBB\n\u8D64\uFF1A\u6BBB\u3059\u3079\u308A"
 --- !u!222 &129085839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &1042463032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,7 +1906,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 124
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &1866654361
 BoxCollider:
   m_ObjectHideFlags: 0
