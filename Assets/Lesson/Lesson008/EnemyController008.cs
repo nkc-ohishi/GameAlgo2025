@@ -97,14 +97,16 @@ public class EnemyController008 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
+
         // ƒvƒŒ[ƒ„[‚ÆÕ“Ë
         if (collision.collider.tag == "Player")
         {
             // ÚG•ûŒü‚ğæ“¾
             Vector3 contactDir = collision.contacts[0].point - transform.position;
-
+            Debug.Log(contactDir);
             // ã‚©‚çÕ“Ë
-            if (contactDir.y > 0.51f)
+            if (contactDir.y > 0.4f)
             {
                 // •à‚« or Šk‚·‚×‚èó‘Ô‚È‚çŠkó‘Ô‚É‚·‚é
                 if (currentState == State.Walking || currentState == State.MovingShell)
