@@ -22,6 +22,9 @@ public class CannonController008 : MonoBehaviour
     {
         gateTrans = transform.Find("Gate");
         player    = GameObject.Find("Player").transform;
+
+        float x = Mathf.Cos(60f * Mathf.Deg2Rad);
+        Debug.Log(x);
     }
 
     void Update()
